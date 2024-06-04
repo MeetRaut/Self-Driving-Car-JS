@@ -20,7 +20,7 @@ if(localStorage.getItem("bestBrain")){
         }
     }
 }
-
+/*
 const traffic=[
     new Car(getRandomLaneCenter(),-100,30,50,"DUMMY",2,getRandomColor()),
     new Car(getRandomLaneCenter(),-100,30,50,"DUMMY",2,getRandomColor()),
@@ -35,6 +35,19 @@ const traffic=[
     new Car(getRandomLaneCenter(),-1100,30,50,"DUMMY",2,getRandomColor()),
     new Car(getRandomLaneCenter(),-1100,30,50,"DUMMY",2,getRandomColor())
 ];
+*/
+
+// For loop to add traffic 
+const traffic = [];
+const carCount = 100; 
+const initialY = -100; 
+const yIncrement = 200; 
+
+for (let i = 0; i < carCount; i += 2) {
+    const yPosition = initialY - (i / 2) * yIncrement;
+    traffic.push(new Car(getRandomLaneCenter(), yPosition, 30, 50, "DUMMY", 2, getRandomColor()));
+    traffic.push(new Car(getRandomLaneCenter(), yPosition, 30, 50, "DUMMY", 2, getRandomColor()));
+}
 
 animate();
 

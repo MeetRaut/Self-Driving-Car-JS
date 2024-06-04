@@ -52,3 +52,8 @@ function getRandomColor(){
     return "hsl("+hue+", 100%, 60%)";
 }
                 
+
+function getRandomLaneCenter() {
+    const laneIndex = Math.floor(Math.random() * 3); 
+    return road.getLaneCenter(laneIndex);
+}

@@ -22,20 +22,25 @@ if(localStorage.getItem("bestBrain")){
 }
 
 const traffic=[
-    new Car(road.getLaneCenter(1),-100,30,50,"DUMMY",2,getRandomColor()),
-    new Car(road.getLaneCenter(0),-300,30,50,"DUMMY",2,getRandomColor()),
-    new Car(road.getLaneCenter(2),-300,30,50,"DUMMY",2,getRandomColor()),
-    new Car(road.getLaneCenter(0),-500,30,50,"DUMMY",2,getRandomColor()),
-    new Car(road.getLaneCenter(1),-500,30,50,"DUMMY",2,getRandomColor()),
-    new Car(road.getLaneCenter(1),-700,30,50,"DUMMY",2,getRandomColor()),
-    new Car(road.getLaneCenter(2),-700,30,50,"DUMMY",2,getRandomColor()),
-    new Car(road.getLaneCenter(0),-900,30,50,"DUMMY",2,getRandomColor()),
-    new Car(road.getLaneCenter(2),-900,30,50,"DUMMY",2,getRandomColor()),
-    new Car(road.getLaneCenter(0),-1100,30,50,"DUMMY",2,getRandomColor()),
-    new Car(road.getLaneCenter(1),-1100,30,50,"DUMMY",2,getRandomColor())
+    new Car(getRandomLaneCenter(),-100,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-100,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-300,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-300,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-500,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-500,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-700,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-700,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-900,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-900,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-1100,30,50,"DUMMY",2,getRandomColor()),
+    new Car(getRandomLaneCenter(),-1100,30,50,"DUMMY",2,getRandomColor())
 ];
 
 animate();
+
+function reloadPage() {
+    location.reload();
+}
 
 function save(){
     localStorage.setItem("bestBrain",
